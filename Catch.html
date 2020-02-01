@@ -6,29 +6,29 @@
     <script>
       function father()
       {
-          //take the text ball away from the father
+          document.getElementByID("dad").innerHTML="" //take the text ball away from the father
           //put the text ball in the son
       }
       function son()
       {
-          //take the text ball away from the son
+         document.getElementByID("child").innerHTML="" //take the text ball away from the son
           //put the text ball in the father
       }
     </script>
    </head>
       <body>
         <h2>Son</h2>
-        <p>
+        <p id="child">
           ball
         </p>
          <button onclick="son()">
-           Throw
+           Throw the ball
         </button>
         <h2>Father</h2>
-        <p>
-          Father
+        <p id="dad">
         </p>
         <button onclick"father()">
+          Throw the ball
         </button>
   </body >   
     </html>
