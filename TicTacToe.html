@@ -5,54 +5,62 @@
     button {width:150px; height:50px;}
   </style>
   <script>
+    var game=[0, 0, 0, 0, 0, 0, 0, 0, 0]
     function putX(slate)
     {
-    document.getElementById(slate).innerHTML=""
-    document.getElementById(slate).innerHTML="X"
+    document.getElementById("slate"+slate).innerHTML=""
+    document.getElementById("slate"+slate).innerHTML="X"
+    game [slate]=1
+    }
+    function putO(slate0)
+    {
+    document.getElementById("slate"+slate).innerHTML=""
+    document.getElementById("slate"+slate).innerHTML="O"
+    game [slate]=-1
     }  
   </script>
   </head>
     <body>
     <table>
       <tr>
-        <td id="slateTL">
-          <button onclick="putX('slateTL')">
+        <td id="slate0">
+          <button onclick="putX(0)">
           </button>
         </td>
-        <td id="slateTM">
-          <button onclick="putX('slateTM')">
+        <td id="slate1">
+          <button onclick="putX(1)">
           </button>
         </td>
-        <td id="slateTR">
-          <button onclick="putX('slateTR')">
-          </button>
-        </td>
-      </tr>
-      <tr>
-        <td id="slateML">
-          <button onclick="putX('slateML')">
-          </button>
-        </td>
-        <td id="slateMM">
-          <button onclick="putX('slateMM')">
-          </button>
-        </td>
-        <td id="slateMR">
-          <button onclick="putX('slateMR')">
+        <td id="slate2">
+          <button onclick="putX(2)">
           </button>
         </td>
       </tr>
       <tr>
-        <td id="slateBL">
-          <button onclick="putX('slateBL')">
+        <td id="slate3">
+          <button onclick="putX(3)">
           </button>
         </td>
-        <td id="slateBM">
-          <button onclick="putX('slateBM')">
+        <td id="slate4">
+          <button onclick="putX(4)">
           </button>
         </td>
-        <td id="slateBR">
-          <button onclick="putX('slateBR')">
+        <td id="slate5">
+          <button onclick="putX(5)">
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td id="slate6">
+          <button onclick="putX(6)">
+          </button>
+        </td>
+        <td id="slate7">
+          <button onclick="putX(7)">
+          </button>
+        </td>
+        <td id="slate8">
+          <button onclick="putX(8)">
           </button>
         </td>
       </tr>
