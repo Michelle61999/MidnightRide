@@ -23,7 +23,11 @@
     document.getElementById("slate"+slate).innerHTML=""
     document.getElementById("slate"+slate).innerHTML="O"
     game [slate]=-1
-    }  
+    }
+    function reset()
+    {
+    document.getElementById("slate0").innerHTML="<button onclick='putX(0)'></button>"
+    }
   </script>
   </head>
     <body>
