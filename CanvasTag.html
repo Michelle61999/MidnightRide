@@ -1,7 +1,9 @@
 <html>
   <head>
     <style>
-    var c = document.getElementById("myCanvas");
+    </style>
+      <script>
+         var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
 var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
@@ -11,11 +13,12 @@ grd.addColorStop(1, "white");
 // Fill with gradient
 ctx.fillStyle = grd;
 ctx.fillRect(10, 10, 150, 100); 
-    </style>
-      <script>
-      </script>
+        function myCanvas()
+        {
+        }
+   </script>
   </head>
-    <body>
+    <body onload="myCanvas()">
     </body>
     </html>
   
