@@ -4,13 +4,15 @@
     </style>
       <script>
         var ctx;
+        var x=36;
+        var y=69;
  function myCanvas()
   {
     var c = document.getElementById("myCanvas");
     ctx = c.getContext("2d");
-    myDrawing(12,40)
+    setInterval(myDrawing,250)
   }
- function myDrawing(x,y)
+ function myDrawing()
   {
    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
    grd.addColorStop(0, "red");
@@ -18,6 +20,8 @@
     // Fill with gradient
    ctx.fillStyle = grd;
    ctx.fillRect(x, y, 150, 100);
+    x+=13;
+    y-=13
   }
    </script>
   </head>
