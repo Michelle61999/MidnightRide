@@ -20,9 +20,23 @@
     // Fill with gradient
    ctx.fillStyle = grd;
    ctx.fillRect(x, y, 150, 100);
+   move()
+  }
+ function move()
+  {
     x+=13;
     y-=13
-  }
+    if(y<0)
+       {
+         y=0
+       }
+        
+    
+      if(x>100)
+      {
+        x=100
+      }
+  } 
    </script>
   </head>
     <body onload="myCanvas()">
