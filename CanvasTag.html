@@ -7,14 +7,14 @@
   {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+    myDrawing()
   }
  function myDrawing()
   {
    var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
    grd.addColorStop(0, "red");
    grd.addColorStop(1, "white");
-
-   // Fill with gradient
+    // Fill with gradient
    ctx.fillStyle = grd;
    ctx.fillRect(10, 10, 150, 100); 
   }
@@ -23,6 +23,7 @@
     <body onload="myCanvas()">
       <canvas id="myCanvas">
       </canvas>
+      
     </body>
     </html>
   
