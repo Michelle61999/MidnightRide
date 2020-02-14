@@ -4,17 +4,30 @@
       canvas {width:900; height:600; background-color:black;}
     </style>
       <script>
+      function Mole()
+        {
+        this.x=0
+        this.y=0
+        }
+        this.img = new Image();
+        this.img.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dotabuff.com%2Fplayers%2F36741180&psig=AOvVaw30GhgOYUGfVNfqX2GStx-c&ust=1581723689730000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKigpozaz-cCFQAAAAAdAAAAABAD" 
       var moleImage = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dotabuff.com%2Fplayers%2F36741180&psig=AOvVaw30GhgOYUGfVNfqX2GStx-c&ust=1581723689730000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKigpozaz-cCFQAAAAAdAAAAABAD"
-      ctx.drawImage(img, 10, 10)
       function montyLoad()
       {
       var c = document.getElementById("moleImage");
       ctx = c.getContext("2d");
+      var m = new Mole();
+      }
       
   
       }
       function moveMonty()
       {
+      }
+      Mole.prototype.draw= function()
+      {
+      ctx.drawImage(this.img, this.x, this.y, 20, 20)
+       }
       
       </script>
    </head>
