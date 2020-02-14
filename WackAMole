@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <style>
+      canvas {width:1500; height:1500; background-color:black;}
+    </style>
+      <script>
+      var moleImage = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dotabuff.com%2Fplayers%2F36741180&psig=AOvVaw30GhgOYUGfVNfqX2GStx-c&ust=1581723689730000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKigpozaz-cCFQAAAAAdAAAAABAD"
+      ctx.drawImage(img, 10, 10)
+      function montyLoad()
+      {
+      var c = document.getElementById("moleImage");
+      ctx = c.getContext("2d");
+      
+  
+      }
+      function moveMonty()
+      {
+      
+      </script>
+   </head>
+   <body onload="montyLoad()">
+    <canvas id="moleImage"></canvas>
+ </html>
+      
