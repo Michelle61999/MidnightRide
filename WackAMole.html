@@ -1,42 +1,50 @@
 <html>
   <head>
     <style>
-      canvas {width:900; height:600; background-color:black;}
+      canvas {background-color:black;}
     </style>
-      <script>
-      function Mole()
-        {
-        this.x=Math.floor(Math.random()*900);
-        this.y=Math.floor(Math.random()*600);
-        }
-        this.img = new Image();
-        img.onload = function() {
-          ctx.drawImage(this, 0, 0, 20, 20);
-        }
-        this.img.src = "https://vignette.wikia.nocookie.net/fantendo/images/2/21/Monty_Mole_NSMBU_Solo.png/revision/latest/scale-to-width-down/340?cb=20151206145547"
+    <script>
+      var ctx;
+      var img;
+      function loadMe()
+      {
+        var c = document.getElementById("monty");
+        c.width = 400;
+        c.height = 300;
+        c.style.width = '400px';
+        c.style.height = '300px';
+        ctx = c.getContext("2d");
         
-      function montyLoad()
-      {
-      var c = document.getElementById("moleImage");
-      ctx = c.getContext("2d");
-      var m = new Mole();
-      m.draw()
-      
-      
-  
+        img= new Image;
+        img onload = function() {
+          startMoles();
+        };
+        img.src = "https://vignette.wikia.nocookie.net/fantendo/images/2/21/Monty_Mole_NSMBU_Solo.png/revision/latest/scale-to-width-down/340?cb=20151206145547"
       }
-      function moveMonty()
-      {
-      }
-      Mole.prototype.draw= function()
-      {
-      ctx.drawImage(img, this.x, this.y, 20, 20)
-       }
       
-      </script>
-   </head>
-   <body onload="montyLoad()">
-    <canvas id="moleImage"></canvas>
+      function startMoles()
+      {
+          var m = new Mole(0,0);
+          m.draw();
+          m = new Mole(20,20);
+          m.draw();
+          m = new Mole(40,40);
+          m.draw();
+      }
+
+      function Mole(x,y)
+      {
+        this.x=x;//this.x=Math.floor(Math.random()*100);
+        this.y=y;//this.y=Math.floor(Math.random()*100);
+      }
+
+      Mole.prototype.draw = function()
+      {
+        ctx.drawImage(img, this.x, this.y, 20, 20);
+      }
+    </script>
+  </head>
+  <body onload="loadme()">
+    <canvas id="field"></canvas>
   </body>
- </html>
-      
+</html>
