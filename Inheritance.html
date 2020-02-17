@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <style>
+     </style>
+        <script>
+          <output name="Plant" for+"br">
+          </output>
+          
+          function Plant ()
+          {
+            this.name = "Plant";
+          }
+          
+          Plant.prototype.grow = function ()
+          {
+            document.getElementById("output").innerHTML+="The "+this.Name+" grows.<br>";
+          }
+          
+          Plant.prototype.Describe = function ()
+          {
+            document.getElementById("output").innerHTML+="I am a "+this.Name+".<br>";
+            
+          var p = new Plant();
+          p.grow();
+          var f = new Flower();
+          f.grow();
+          
+          function Flower()
+          {
+            Plant.call(this);
+            this.name="Flower";
+          }
+          
+          Flower.prototype = Plant.prototype;
+          Flower.prototype.constructor = Flower;
+          
+        </script>
+   </head>
+    <body>
+      <button onclick="new Plant()">
+        Plant Grows
+      </button>
+    </body>
+ </html>
