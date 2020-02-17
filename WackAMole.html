@@ -1,6 +1,5 @@
 <html>
   <head>
-    <button id="hammertime"><Tickle it</button>
     <style>
       canvas {background-color:black;}
     </style>
@@ -32,7 +31,12 @@
           //SetInterval(startMoles, 200)
       }
       
-      document.getElementById("hammertime").addEventListener("click", startMoles);
+      function duplicate()
+      {
+        alert("click");
+      }
+      
+      document.getElementById("monty").addEventListener("mousedown", duplicate);
 
       function Mole()
       {
