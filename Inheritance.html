@@ -33,6 +33,10 @@
           
           Flower.prototype = Plant.prototype;
           Flower.prototype.constructor = Flower;
+            
+            Flower.prototype.Describe = function ()
+            {
+              document.getElementById("output").innerHTML+="I am a beautiful"+this.Name+".<br>";
           
         </script>
    </head>
