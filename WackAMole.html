@@ -27,22 +27,17 @@
       
       function startMoles()
       {
-          mulMonty[0]=new Mole
-          var m = new Mole(0,0);
-          m.draw();
-          m = new Mole(20,20);
-          m.draw();
-          m = new Mole(40,40);
-          m.draw();
-          SetInterval(startMoles, 200)
+          mulMonty[0]=new Mole()
+          mulMonty[0].draw();
+          //SetInterval(startMoles, 200)
       }
       
       document.getElementById("hammertime").addEventListener("click", startMoles);
 
-      function Mole(x,y)
+      function Mole()
       {
-        this.x=x;//this.x=Math.floor(Math.random()*100);
-        this.y=y;//this.y=Math.floor(Math.random()*100);
+        this.x=Math.floor(Math.random()*100);
+        this.y=Math.floor(Math.random()*100);
       }
 
       Mole.prototype.draw = function()
