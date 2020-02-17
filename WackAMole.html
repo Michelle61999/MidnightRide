@@ -1,5 +1,6 @@
 <html>
   <head>
+    <button id="hammertime"><Tickle it</button>
     <style>
       canvas {background-color:black;}
     </style>
@@ -14,6 +15,7 @@
         c.style.width = '400px';
         c.style.height = '300px';
         ctx = c.getContext("2d");
+        SetInterval(startMoles, 200);
         
         img= new Image;
         img onload = function() {
@@ -31,6 +33,8 @@
           m = new Mole(40,40);
           m.draw();
       }
+      
+      document.getElementById("hammertime").addEventListener("click", startMoles);
 
       function Mole(x,y)
       {
@@ -41,6 +45,10 @@
       Mole.prototype.draw = function()
       {
         ctx.drawImage(img, this.x, this.y, 20, 20);
+      }
+      if(count/5==0)
+      {
+      new Mole
       }
     </script>
   </head>
