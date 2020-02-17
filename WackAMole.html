@@ -7,6 +7,7 @@
     <script>
       var ctx;
       var img;
+      var mulMonty=[]
       function loadMe()
       {
         var c = document.getElementById("monty");
@@ -26,6 +27,7 @@
       
       function startMoles()
       {
+          mulMonty[0]=new Mole
           var m = new Mole(0,0);
           m.draw();
           m = new Mole(20,20);
