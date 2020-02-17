@@ -15,7 +15,7 @@
         c.style.width = '400px';
         c.style.height = '300px';
         ctx = c.getContext("2d");
-        SetInterval(startMoles, 200);
+        
         
         img= new Image;
         img onload = function() {
@@ -32,6 +32,7 @@
           m.draw();
           m = new Mole(40,40);
           m.draw();
+          SetInterval(startMoles, 200)
       }
       
       document.getElementById("hammertime").addEventListener("click", startMoles);
@@ -48,7 +49,7 @@
       }
       if(count/5==0)
       {
-      new Mole
+      startMoles();
       }
     </script>
   </head>
