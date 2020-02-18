@@ -34,19 +34,28 @@
       
       function duplicate(event)
       {
-        alert("click@"+event.screenX+", "+event.screenY);
+        mulMonty[0].didIClickYou(event.screenX,event.screenY)
       }
 
       function Mole()
       {
         this.x=Math.floor(Math.random()*100);
         this.y=Math.floor(Math.random()*100);
+        
       }
 
       Mole.prototype.draw = function()
       {
         ctx.drawImage(img, this.x, this.y, 20, 20);
       }
+      Mole.prototype.didIClickYou = function(x,y)
+      {
+        if(this.x<x && x<this.x+20 && this.y<y && y<this.y+20)
+        {
+          alert("This is monty")
+        }
+      }
+      
       if(count/5==0)
       {
       startMoles();
