@@ -35,6 +35,8 @@
       function duplicate(event)
       {
         mulMonty[0].didIClickYou(event.offsetX,event.offsetY)
+        
+        
       }
 
       function Mole()
@@ -52,7 +54,10 @@
       {
         if(this.x<x && x<this.x+20 && this.y<y && y<this.y+20)
         {
-          alert("This is monty")
+          ctx.clearRect(this.x, this.y, 20, 20);
+          this.x=Math.floor(Math.random()*100);
+          this.y=Math.floor(Math.random()*100);
+          this.draw();
         }
       }
       
