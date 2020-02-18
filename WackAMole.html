@@ -27,16 +27,21 @@
       
       function startMoles()
       {
-          mulMonty[0]=new Mole()
-          mulMonty[0].draw();
-          //SetInterval(startMoles, 200)
+         var count=mulMonty.length
+          mulMonty[count]=new Mole()
+          mulMonty[count].draw()
       }
       
       function duplicate(event)
       {
-        mulMonty[0].didIClickYou(event.offsetX,event.offsetY)
+        for (i = 0; i < mulMonty.length; i++) {
+          mulMonty[i].didIClickYou(event.offsetX,event.offsetY)       
+        }
         
-        
+              if(count/5==0)
+      {
+      startMoles();
+      }
       }
 
       function Mole()
@@ -60,11 +65,7 @@
           this.draw();
         }
       }
-      
-      if(count/5==0)
-      {
-      startMoles();
-      }
+     
     </script>
   </head>
   <body onload="loadMe()">
