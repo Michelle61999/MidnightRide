@@ -6,6 +6,7 @@
     <script>
       var ctx;
       var img;
+      var countclicks = 0
       var mulMonty=[]
       function loadMe()
       {
@@ -35,13 +36,15 @@
       function duplicate(event)
       {
         for (i = 0; i < mulMonty.length; i++) {
-          mulMonty[i].didIClickYou(event.offsetX,event.offsetY)       
+          mulMonty[i].didIClickYou(event.offsetX,event.offsetY)
+          countclicks++
         }
         
-              if(count/5==0)
-      {
-      startMoles();
-      }
+        
+        if(countclicks/5==0)
+        {
+          startMoles();
+        }
       }
 
       function Mole()
