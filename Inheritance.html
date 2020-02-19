@@ -31,7 +31,7 @@
             this.name="Flower";
           }
           
-          Flower.prototype = Plant.prototype;
+          Flower.prototype = Object.create(Plant);
           Flower.prototype.constructor = Flower;
             
             Flower.prototype.Describe = function ()
