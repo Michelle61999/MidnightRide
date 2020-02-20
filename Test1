@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <style>
+      #Bob {color:red;}
+      #Dave {color:blue;}
+    </style>
+      <script>
+        function func1()
+        {
+        document.getElementById("Dave").innerHTML="I am Dave."
+        document.getElementById("Bob").innerHTML="I am Bob."
+        }
+      </script>
+    </head>
+      <body>
+        <button onclick="func1()">
+        <p id="Bob">
+        <p id="Dave">
+      </body>
+ </html>
