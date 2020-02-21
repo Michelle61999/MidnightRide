@@ -19,6 +19,7 @@
           Plant.prototype.Describe = function ()
           {
             document.getElementById("output").innerHTML+="I am a "+this.Name+".<br>";
+          }
             
           var p = new Plant();
           p.grow();
@@ -37,10 +38,13 @@
             Flower.prototype.Describe = function ()
             {
               document.getElementById("output").innerHTML+="I am a beautiful"+this.Name+".<br>";
+            }
           
         </script>
    </head>
     <body>
+      <p id="output")>
+      </p>   
       <button onclick="new Plant()">
         Plant Grows
       </button>
