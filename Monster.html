@@ -3,10 +3,11 @@
     <style>
     </style>
       <script>
+        script src = "https://bsdillon.github.io/cs200_Spring2020/GoldField/goldfield.js"
         var goldField
         var udt = new UserDefinedType(monster);
         
-        function changeSound
+        function changeSound()
         {
           monster.AddSound("fart")
         }
@@ -15,15 +16,22 @@
         {
           AddMonster()
           SetPosition(2, 30)
-            Position is 2, 30
-          LookAt(myId,30)
+            Position is (2, 30)
+          LookAt(myId,2,30)
           SetPosition(30, 10)
-            Position is 30, 10
-          Destroy.monster("fart")
+            Position is (30, 10)
+        }
+        
+        function destroyMonster()
+        {
+        Destroy.monster("fart")
         }
               
       </script>
   </head>
     <body onload="monsterMove()">
+    <button onclick="destroyMonster"()
+            Destroy
+    </button>
     </body>
 </html>
