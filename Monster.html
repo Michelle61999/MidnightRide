@@ -6,15 +6,24 @@
         var goldField
         var udt = new UserDefinedType(monster);
         
+        function changeSound
+        {
+          monster.AddSound("fart")
+        }
+        
         function monsterMove()
         {
           AddMonster()
           SetPosition(2, 30)
-          monster = new GoldField(document.getElementById("monster"),30, 20, 15)
-        
-        
+            Position is 2, 30
+          LookAt(myId,30)
+          SetPosition(30, 10)
+            Position is 30, 10
+          Destroy.monster("fart")
+        }
+              
       </script>
   </head>
-    <body>
+    <body onload="monsterMove()">
     </body>
 </html>
