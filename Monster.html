@@ -16,9 +16,9 @@
         function monsterMove()
         {
           goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
-          goldfield.AddMonster()
-          document.getElementById("positionMonster").innerHTML="SetPosition(2, 30)"
-          goldfield.LookAt(myId,2,30)
+          var m = goldfield.AddMonster()
+          document.getElementById("positionMonster").innerHTML=m.myID+" " +m.GetPosition()
+          goldfield.LookAt(myID,2,30)
           document.getElementById("positionMonster2").innerHTML="SetPosition(30, 10)"
         }
         
@@ -30,7 +30,7 @@
       </script>
   </head>
     <body onload="monsterMove()">
-    <button onclick="destroyMonster"()
+    <button onclick="destroyMonster()">
             Destroy
     </button>
       <p id="positionMonster">
