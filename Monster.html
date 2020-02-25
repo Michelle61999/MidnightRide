@@ -16,11 +16,9 @@
         function monsterMove()
         {
           AddMonster()
-          SetPosition(2, 30)
-            Position is (2, 30)
+          document.getElementById("positionMonster").innerHTML="SetPosition(2, 30)"
           LookAt(myId,2,30)
-          SetPosition(30, 10)
-            Position is (30, 10)
+          document.getElementById(positionMonster2").innerHTML="SetPosition(30, 10)"
         }
         
         function destroyMonster()
@@ -34,5 +32,11 @@
     <button onclick="destroyMonster"()
             Destroy
     </button>
+      <p id="positionMonster"
+         Position is (2, 30)
+      </p>
+      <p id="positionMonster2"
+          
+         </p>
     </body>
 </html>
