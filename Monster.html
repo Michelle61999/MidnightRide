@@ -6,7 +6,6 @@
     <script>
         
         var goldField 
-        var udt = new UserDefinedType(monster);
         var whereIam
         var findvalues
         
@@ -22,6 +21,7 @@
           var whereIam = m.GetPosition()
           var findvalues = goldfield.LookAt(whereIam[0],whereIam[1])
           document.getElementById("positionMonster").innerHTML=m.myID+" "+whereIam+" "+findvalues
+          m.SetPosition(30,10)
           document.getElementById("positionMonster2").innerHTML="SetPosition(30, 10)"
         }
         
