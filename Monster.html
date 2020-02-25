@@ -21,7 +21,7 @@
           var m = goldfield.AddMonster()
           var whereIam = m.GetPosition()
           var findvalues = goldfield.LookAt(whereIam[0],whereIam[1])
-          document.getElementById("positionMonster").innerHTML=m.myID+" "+findvalues
+          document.getElementById("positionMonster").innerHTML=m.myID+" "+whereIam+" "+findvalues
           document.getElementById("positionMonster2").innerHTML="SetPosition(30, 10)"
         }
         
