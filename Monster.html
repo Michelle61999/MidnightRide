@@ -5,7 +5,7 @@
     <script src="https://bsdillon.github.io/cs200_Spring2020/GoldField/goldfield.js"> </script>
     <script>
         
-        var goldField
+        var goldField 
         var udt = new UserDefinedType(monster);
         
         function changeSound()
@@ -15,6 +15,7 @@
         
         function monsterMove()
         {
+          goldfield = new Goldfield(document.getElementById("labyrinth"),30, 20, 15);
           AddMonster()
           document.getElementById("positionMonster").innerHTML="SetPosition(2, 30)"
           LookAt(myId,2,30)
@@ -32,11 +33,12 @@
     <button onclick="destroyMonster"()
             Destroy
     </button>
-      <p id="positionMonster"
+      <p id="positionMonster">
          Position is (2, 30)
       </p>
-      <p id="positionMonster2"
-          
-         </p>
+      <p id="positionMonster2"> 
+      </p>
+      <p id="labyrinth">
+      </p>
     </body>
 </html>
