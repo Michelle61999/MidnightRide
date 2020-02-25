@@ -15,7 +15,7 @@
         
         function monsterMove()
         {
-          goldfield = new Goldfield(document.getElementById("labyrinth"),30, 20, 15);
+          goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
           goldfield.AddMonster()
           document.getElementById("positionMonster").innerHTML="SetPosition(2, 30)"
           goldfield.LookAt(myId,2,30)
