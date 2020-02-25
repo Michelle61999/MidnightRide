@@ -8,6 +8,7 @@
         var goldField 
         var whereIam
         var findvalues
+        var m
         
         function changeSound()
         {
@@ -17,7 +18,7 @@
         function monsterMove()
         {
           goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
-          var m = goldfield.AddMonster()
+          m = goldfield.AddMonster()
           var whereIam = m.GetPosition()
           var findvalues = goldfield.LookAt(whereIam[0],whereIam[1])
           document.getElementById("positionMonster").innerHTML=m.myID+" "+whereIam+" "+findvalues
