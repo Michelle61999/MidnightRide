@@ -16,15 +16,15 @@
         function monsterMove()
         {
           goldfield = new Goldfield(document.getElementById("labyrinth"),30, 20, 15);
-          AddMonster()
+          goldfield.AddMonster()
           document.getElementById("positionMonster").innerHTML="SetPosition(2, 30)"
-          LookAt(myId,2,30)
+          goldfield.LookAt(myId,2,30)
           document.getElementById("positionMonster2").innerHTML="SetPosition(30, 10)"
         }
         
         function destroyMonster()
         {
-        Destroy.monster("fart")
+        goldfield.Destroy.monster("fart")
         }
               
       </script>
