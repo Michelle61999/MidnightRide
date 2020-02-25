@@ -7,7 +7,8 @@
         
         var goldField 
         var udt = new UserDefinedType(monster);
-        var lookat
+        var whereIam
+        var findvalues
         
         function changeSound()
         {
@@ -19,8 +20,8 @@
           goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
           var m = goldfield.AddMonster()
           document.getElementById("positionMonster").innerHTML=m.myID+" " +m.GetPosition()
-          m.GetPosition()
-          goldfield.LookAt()
+          var whereIam = m.GetPosition()
+          var findvalues = goldfield.LookAt(whereIam[0],whereIam[1])
           document.getElementById("positionMonster2").innerHTML="SetPosition(30, 10)"
         }
         
