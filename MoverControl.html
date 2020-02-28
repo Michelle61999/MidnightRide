@@ -1,0 +1,35 @@
+<html>
+  <head>
+  
+    <style>
+    
+    </style>
+    
+      <script>
+       var goldfield
+       var m
+       var h
+       var o
+       
+        function movers()
+        {
+          goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
+          m = goldfield.AddMonster()
+          h = goldfield.AddHero()
+           goldfield.SetClickListener(click)
+        }
+        function click()
+        {
+        var o = goldfield.AddObstacle()
+        }
+      
+      </script>
+  </head>
+  
+    <body onload="movers()">
+      <p id="labyrinth">
+      </p>
+    
+    </body>
+    
+</html>
