@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <style>
+    </style>     
+    <script src="https://bsdillon.github.io/cs200_Spring2020/GoldField/goldfield.js"> </script>   
+      <script>
+        var goldfield
+        var g
+        var m
+        var t
+        var w
+        
+        function combo()
+        {
+           goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
+           goldfield.SetKeyListener(key)
+           goldfield.SetClickListener(click)
+        }
+        
+        function key
+        {
+           m = goldfield.AddMonster()
+           g = goldfield.AddGold()
+           t = goldfield.AddTower()
+           w = goldfield.AddObstacle(Water)
+        }
+      </script>
+      
+  </head>
+  <body>
+  </body>
+  </html>
