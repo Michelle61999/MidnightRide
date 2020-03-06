@@ -2,9 +2,8 @@
   <head>
   
     <style>
-    
     </style>
-    
+  <script src="https://bsdillon.github.io/cs200_Spring2020/GoldField/goldfield.js"> </script>  
       <script>
        var goldfield
        var m
@@ -17,10 +16,17 @@
           m = goldfield.AddMonster()
           h = goldfield.AddHero()
            goldfield.SetClickListener(click)
+          goldfield.SetKeyListener(key1)
         }
         function click()
         {
-        var o = goldfield.AddObstacle()
+          var o = goldfield.AddObstacle()
+          "Adds tree to field"
+        }
+        function key1()
+        {
+          o.SetPosition(10,10)
+          "This moves tree to set position"
         }
       
       </script>
