@@ -19,11 +19,18 @@
         
         function key()
         {
-           m = goldfield.AddMonster()
-           g = goldfield.AddGold()
-           t = goldfield.AddTower()
-           w = goldfield.AddObstacle(Water)
+           m = goldfield.AddMonster(97)
+           g = goldfield.AddGold(115)
+           t = goldfield.AddTower(100)
+           w = goldfield.AddObstacle(102)
         }
+        
+         function click()
+        {
+          goldField.GetMover(contents[0]);
+          Destroy()
+        }
+          
       </script>
       
   </head>
