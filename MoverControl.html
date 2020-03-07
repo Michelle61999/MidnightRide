@@ -17,6 +17,8 @@
           h = goldfield.AddHero()
            goldfield.SetClickListener(click)
           goldfield.SetKeyListener(key1)
+          goldfield.SetKeyListener(die)
+          goldfield.SetKeyListener(die2)
         }
         function click()
         {
@@ -28,7 +30,17 @@
           o.SetPosition(10,10)
           "This moves tree to set position"
         }
-      
+        
+        function die()
+        {
+        m.Destroy()
+        }
+        
+        function die2()
+        {
+          h.Destroy()
+        }
+        
       </script>
   </head>
   
