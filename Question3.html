@@ -1,39 +1,25 @@
 <html>
   <head>
     <style>
+      <span id="clock"></span>
     </style>
       <script>
-      import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
+    (function () {
 
-public class GetCurrentDateTime {
+  var clockElement = document.getElementById( "clock" );
 
-    private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-    private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+  function updateClock ( clock ) {
+    clock.innerHTML = new Date().toLocaleTimeString();
+  }
 
-    public static void main(String[] args) {
+  setInterval(function () {
+      updateClock( clockElement );
+  }, 1000);
 
-        Date date = new Date();
-        System.out.println(sdf.format(date));
+}());
 
-        Calendar cal = Calendar.getInstance();
-        System.out.println(sdf.format(cal.getTime()));
-
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(dtf.format(now));
-
-        LocalDate localDate = LocalDate.now();
-        System.out.println(DateTimeFormatter.ofPattern("yyy/MM/dd").format(localDate));
-
-    }
-
-}
       </script>
   </head>
-    <body>
+    <body onload="updateClock(clock)">
     </body>
 </html>
