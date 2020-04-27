@@ -9,28 +9,10 @@
         var goldfield
         var h
         var g
-        var d = diglett()
         
         
         
-  function diglett()              
-  {
-   this.Description = "dig";
-   this.imageURL = "https://www.smogon.com/articles/images/lc-spotlight-diglett.png";
-   this.destroyURL = "https://img.memecdn.com/diglett_o_1069334.jpg";//this needs to be an actual image url in your code or on the web
-   this.destroyAudio = "Fart";//sets the name of the sound file
-   this.destroyTime = 1000;//set the time you want for any animation or sound before the tag is destroyed.
-   this.InitTag(d);
-   UserDefinedType.prototype = Object.create(Mover.prototype);
-}
-        function add()
-        {
-   var id = this.CreateMoverTag();
-   var udt = new UserDefinedType(dig);
-   this.AddGenericMover(dig);
-   return udt;
-}
-        
+               
         function villain()
         {
           goldfield = new GoldField(document.getElementById("labyrinth"),30, 20, 15);
@@ -40,8 +22,8 @@
           h.SetPosition(1,1)
           g = goldfield.AddGold()
           g.SetPosition(17,13)
-          d = goldfield.Adddig()
-          d.SetPosition(10,10)
+          m = goldfield.AddMonster()
+          m.SetPosition(10,10)
         }
         
         function mouse()
@@ -49,7 +31,7 @@
          if (17,13)
          {
           goldfield.Win()
-          d.Destroy()
+          m.Destroy()
          }
         }
         
@@ -61,8 +43,8 @@
           h.SetPosition(1,1)
           g = goldfield.AddGold()
           g.SetPosition(17,13)
-          d = goldfield.Adddig()
-          d.SetPosition(10,10)
+          d = goldfield.AddMonster()
+          m.SetPosition(10,10)
         }
         
        
