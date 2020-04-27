@@ -20,6 +20,34 @@
           m = goldfield.AddMonster()
           m.SetPosition(10,10)
         }
+        
+        function Key(event)
+      {
+        document.getElementById("output").innerHTML = "Key: "+event;
+        //37 left arrow
+        //38 up arrow
+        //39 right arrow
+        //40 down arrow
+
+        var deltaX = 0;
+        var deltaY = 0;
+        if(event[0]==37)
+        {
+          deltaX = -1;
+        }
+        else if(event[0]==38)
+        {
+          deltaY = -1;
+        }
+        else if(event[0]==39)
+        {
+          deltaX = 1;
+        }
+        else if(event[0]==40)
+        {
+          deltaY = 1;
+        }
+
       </script>
    </head>
     <body onload="villain()">
