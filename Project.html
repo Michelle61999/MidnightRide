@@ -34,7 +34,13 @@
         function reset()
         {
           goldfield.Reset()
-          villain()
+          goldfield.SetClickListener(mouse)
+          h = goldfield.AddHero()
+          h.SetPosition(1,1)
+          g = goldfield.AddGold()
+          g.SetPosition(17,13)
+          m = goldfield.AddMonster()
+          m.SetPosition(10,10)
         }
         
        
